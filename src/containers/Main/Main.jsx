@@ -21,10 +21,14 @@ const Main = (props) => {
   return (
     <div className='mainScreen'>
         <div>
+            <SearchBox />
+        </div>
+        
+        <div className='navBar'>
             <Navbar />
         </div>
         
-        <div>
+        <div className='cardList'>
           <CardList beers={beers} />
         </div>
         
@@ -32,4 +36,4 @@ const Main = (props) => {
   )
 }
 
-export default Main
+export default Main;
