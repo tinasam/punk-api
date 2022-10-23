@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import "./Main.scss";
 import beers from '../../assets/data/beers';
-import CardList from '../../components/CardList/CardList';
 import SearchBox from '../../components/SearchBox/SearchBox';
+import CardList from '../../components/CardList/CardList';
 import Navbar from '../../components/Navbar/Navbar';
+
 
 
 
@@ -20,10 +21,10 @@ const Main = (props) => {
 
   return (
     <div className='mainScreen'>
-        <div>
+        <div className='searchBox'>
             <SearchBox />
         </div>
-        
+
         <div className='navBar'>
             <Navbar />
         </div>

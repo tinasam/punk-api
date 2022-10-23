@@ -1,15 +1,9 @@
 import React from 'react'
-import "./SearchBox.scss";
-
 
 const SearchBox = () => {
-
-    return (
-    <div className="searchBox">
-      <input type="text" placeholder='Search' />
-    </div>
+  return (
+    <div className="searchBox" type="text" >Search</div>
   )
 }
 
 export default SearchBox;
-

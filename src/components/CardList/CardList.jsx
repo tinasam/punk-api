@@ -21,7 +21,7 @@ const CardList = (props) => {
     ));
     return (
         <>{beerListJSX}
-        <Card />
+        
         </>
   );
 };
