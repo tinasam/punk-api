@@ -28,11 +28,10 @@ const Main = (props) => {
         <div className='navBar'>
             <Navbar />
         </div>
-        
-        <div className='cardList'>
-          <CardList beers={beers} />
+
+        <div>
+            <CardList beers={beers} />
         </div>
-        
     </div>
   )
 }
