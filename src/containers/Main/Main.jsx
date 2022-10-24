@@ -20,16 +20,15 @@ const Main = (props) => {
 
 
   return (
-    <div className='mainScreen'>
+    <div className="mainScreen">
         <div className='searchBox'>
             <SearchBox />
+              <div className='navBar'>
+                  <Navbar />
+            </div>
         </div>
 
-        <div className='navBar'>
-            <Navbar />
-        </div>
-
-        <div>
+        <div className="all-beers">
             <CardList beers={beers} />
         </div>
     </div>
