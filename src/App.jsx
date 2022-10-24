@@ -4,15 +4,10 @@ import Main from "../src/containers/Main/Main"
 
 
 const App = () => {
-    
-
-  
-  return (
-    <div>
-
-      <Main />
-        
-    </div>
+    return (
+      <div>
+        <Main />
+      </div>
   );
 };
 

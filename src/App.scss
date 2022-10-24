@@ -1,4 +1,9 @@
-.App {
+//   * {
+//     margin: 0;
+//     padding: 0;
+// }
 
-  
-}
+.App {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    };

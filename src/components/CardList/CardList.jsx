@@ -5,14 +5,13 @@ import Card from "../Card/Card";
 const CardList = (props) => {
     const { beers } = props;
 
-    const beerListJSX = beers.map((beer, index) => (
-        <Card />
+    const beerListJSX = beers.map((beer ) => (
+        <Card beer={beer} key={beer.id} />
     ));
     
     return (
-      
-        <div> {beerListJSX}</div>
-      
+        // <div key={ beer.name + (index + 1)}>
+      <div className='all-beers'>{beerListJSX}</div>
   );
 };
 

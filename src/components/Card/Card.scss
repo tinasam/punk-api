@@ -1,0 +1,26 @@
+.one-beer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+}
+    
+.beer-tiles__img{
+    width:60px;
+    height: 200px;
+    
+    } 
+.beer-name{
+        // font-weight: 10px;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 5px;
+        
+    }
+    .beer-desp{
+        text-align: center;
+        font-size: 10px;
+        margin-top: 5px;
+        
+    }

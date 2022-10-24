@@ -2,14 +2,14 @@ import { useState } from 'react'
 import "./Main.scss";
 import beers from '../../assets/data/beers';
 import SearchBox from '../../components/SearchBox/SearchBox';
+import Card from '../../components/Card/Card';
 import CardList from '../../components/CardList/CardList';
 import Navbar from '../../components/Navbar/Navbar';
 
 
 
 
-const Main = (props) => {
-    const { beersArr} = props;
+const Main = () => {
     const [searchBeer, setSearchBeer] = useState("");
 
     const handleInput = (event) => {
@@ -28,7 +28,7 @@ const Main = (props) => {
             </div>
         </div>
 
-        <div className="all-beers">
+        <div className='all-beers'>
             <CardList beers={beers} />
         </div>
     </div>
