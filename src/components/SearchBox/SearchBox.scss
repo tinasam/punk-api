@@ -1,7 +1,10 @@
-.searchBox {
+.searchBox1 {
     padding: 50px;
-    margin-left: 300px;
+    // margin-left: 300px;
     height: 100px;
-    width: 80px;
+    width: 80%;
     font-size: large;
+    display: flex;
+    flex-direction: column;
 }
+
