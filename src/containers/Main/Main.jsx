@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import "./Main.scss";
 import beers from '../../assets/data/beers';
+import filter from '../../assets/data/filter';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import Card from '../../components/Card/Card';
 import CardList from '../../components/CardList/CardList';
@@ -12,13 +13,14 @@ import Navbar from '../../components/Navbar/Navbar';
 const Main = () => {
     const [beers, setBeers] = useState([]);
     const [searchBeer, setSearchBeer] = useState("");
+    const [filterBeer, updateBeerFilterArr] = useState(filter);
 
     const url = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
 
   useEffect(()=>{
     getBeers();
   }, []);
-  
+
   const getBeers = async () => {
     const res = await fetch(url);
     const data = await res.json();
@@ -37,6 +39,9 @@ const Main = () => {
         }
     );
 
+    //  const handleBeerFilter = (event)  => {
+    //     filterBeer = beers
+    //  }  
 
 
   return (
@@ -53,8 +58,13 @@ const Main = () => {
             {/* <CardList beers={beers} /> */}
             {searchBeers.length !=0 && <CardList beers={searchBeers} />}
         </div>
+
+        <div className='all-beers'>
+           
+           <FilterList beers={beers} />
+        </div>
     </div>
-  )
-}
+    )
+  }
 
 export default Main;
