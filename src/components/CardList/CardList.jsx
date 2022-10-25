@@ -10,8 +10,7 @@ const CardList = (props) => {
     ));
     
     return (
-        // <div key={ beer.name + (index + 1)}>
-      <div className='all-beers'>{beerListJSX}</div>
+        <div className='all-beers'>{beerListJSX}</div>
   );
 };
 

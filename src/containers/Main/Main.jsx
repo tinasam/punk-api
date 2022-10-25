@@ -6,6 +6,7 @@ import SearchBox from '../../components/SearchBox/SearchBox';
 import Card from '../../components/Card/Card';
 import CardList from '../../components/CardList/CardList';
 import Navbar from '../../components/Navbar/Navbar';
+// import FilterList from '../../components/FilterList/FilterList';
 
 
 
@@ -19,7 +20,7 @@ const Main = () => {
 
   useEffect(()=>{
     getBeers();
-  }, []);
+  }, [searchBeer]);
 
   const getBeers = async () => {
     const res = await fetch(url);
@@ -35,13 +36,22 @@ const Main = () => {
   // filtered array for typing search of beers
     const searchBeers = beers.filter((beer) => {
         const beerName = beer.name.toLowerCase();
+        console.log(searchBeer);
         return beerName.includes(searchBeer);
         }
     );
 
-    //  const handleBeerFilter = (event)  => {
-    //     filterBeer = beers
-    //  }  
+    const filterBeerList = beers.filter((filter) => {
+      if (text=="High ABV (>6/0%)"){
+          return filter.abv >6;
+      }
+    else if (text=="Classic Range"){
+        const year = filter.first_brewed.slice(-4,)
+    }
+    else if (text=="Acidic (ph <4)") {
+      return filter.ph <4;
+    }  
+  }); 
 
 
   return (
@@ -49,9 +59,6 @@ const Main = () => {
       {/* <h1 className='header'>Punk API</h1> */}
         <div className='searchBox'>
             <SearchBox handleInput={handleInput} searchBeer={searchBeer} />
-            <div className='navBar'>
-                <Navbar />
-            </div>
         </div>
 
         <div className='all-beers'>
@@ -59,10 +66,10 @@ const Main = () => {
             {searchBeers.length !=0 && <CardList beers={searchBeers} />}
         </div>
 
-        <div className='all-beers'>
-           
-           <FilterList beers={beers} />
-        </div>
+        {/* <div className='updatedFilteredBeer'>
+            <FilterList beerFilter={filterBeerList} filterBeer={filterBeer}
+            />
+        </div> */}
     </div>
     )
   }
