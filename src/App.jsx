@@ -6,7 +6,7 @@ import Main from "../src/containers/Main/Main"
 const App = () => {
     return (
       <div>
-        <h1 className="header">Punk API</h1>
+        <h1 className="header">I 'hate' this PUNK API project</h1>
         <Main />
       </div>
 
