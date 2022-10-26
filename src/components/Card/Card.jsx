@@ -13,6 +13,9 @@ const Card = (props) => {
         />
     <div>
         <h1 className='beer-name'>{beer.name}</h1>
+        <p className='beer-desp'>{beer.abv}</p>
+        <p className='beer-desp'>{beer.ph}</p>
+        <p className='beer-desp'>{beer.first_brewed}</p>
         <p className='beer-desp'>{beer.description}</p>
     </div>
     </div>

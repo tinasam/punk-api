@@ -15,8 +15,8 @@
 // }
 
 .all-beers {
-    display: grid;
-grid-template: 300px/ auto auto auto;
+display: grid;
+grid-template: 400px/ auto auto auto;
 grid-template-columns: 300px 300px 300px;
 grid-template-rows: auto;
 grid-gap:20px;

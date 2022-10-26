@@ -33,9 +33,16 @@ const Main = () => {
   // filtered array for typing search of beers
     const searchBeers = beers.filter((beer) => {
         const beerName = beer.name.toLowerCase();
-        return beerName.includes(searchBeer);
+        return beerName.includes(searchBeer)
+        && (filterBeer[0].checked ? beer.abv > 6: true )
+        && (filterBeer[1].checked ? beer.first_brewed.substr(3,6) < 2010: true )
+        && (filterBeer[2].checked ? beer.ph < 4: true )
         }
     );
+
+    
+        
+
 
     const filterBeerList = beers.filter((filter) => {
       if (filter.text=="High ABV (>6/0%)"){
