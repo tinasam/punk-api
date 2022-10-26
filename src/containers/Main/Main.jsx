@@ -13,7 +13,7 @@ const Main = () => {
     const [searchBeer, setSearchBeer] = useState("");
     const [filterBeer, updateBeerFilterArr] = useState(initBeerFilterArr);
 
-    const url = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
+    const url = "https://api.punkapi.com/v2/beers?page=1&per_page=45"
 
   useEffect(()=>{
     getBeers();
