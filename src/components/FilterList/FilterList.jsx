@@ -3,14 +3,14 @@ import "./FilterList.scss";
 import FilterItem from "../FilterItem/FilterItem";
 // import beers from '../../assets/data/beers';
 const FilterList = (props) => {
-    const { beerFilter, filterBeer} = props;
+    const { filterBeer, toggleCheckedFilter } = props;
 
-    const beersFiltered = beerFilter.map((beer ) => (
-      <FilterItem beer={filterBeer} key={beer.id} />
-  ));
+    const beersFiltered = filterBeer.map((beer ) => (
+      <FilterItem beer={beer} toggleCheckedFilter={toggleCheckedFilter} key={beer.id} />
+      ));
     
   return (
-    < FilterItem  />
+    <div> {beersFiltered} </div>
     );
   }
 

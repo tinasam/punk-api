@@ -3,7 +3,7 @@ import "./Card.scss";
 
 const Card = (props) => {
     const { beer } = props;
-    console.log(beer);
+    // console.log(beer);
   return (
     <div className="one-beer">
     <img
